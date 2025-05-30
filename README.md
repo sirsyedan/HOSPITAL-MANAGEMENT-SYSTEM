@@ -1,54 +1,59 @@
-# Hospital Management System (C++)
+Hospital Management System (HMS)
 
-## Project Overview
+Project Overview
+This project is a Hospital Management System written in C++. It allows managing doctors, appointments, and billing through a console-based menu. The system supports adding, updating, deleting, and searching doctors; booking appointments with doctor availability checks; and generating bills for appointments.
 
-This project is a console-based Hospital Management System implemented in C++. It allows management of doctors, appointments, and billing in a simplified manner. The system uses linked lists and vectors to store and manage data dynamically.
+Features
 
-Key features include:
-- Adding, updating, deleting, and searching doctors.
-- Managing doctor availability.
-- Booking patient appointments.
-- Generating and displaying billing for appointments.
+Add new doctors and maintain their availability schedules.
 
----
+Display all doctors with details.
 
-## File Structure
+Search doctors by name.
 
-- **doctor.h / doctor.cpp**  
-  Defines the `Doctor` class, including attributes like name, age, specialization, and availability.
+Update or delete doctor information by ID.
 
-- **doctor_manager.h / doctor_manager.cpp**  
-  Implements the `DoctorManager` class, which handles a linked list of doctors and provides CRUD operations and sorting.
+Sort doctors alphabetically by name.
 
-- **appointment1.h / appointment1.cpp**  
-  Defines `Appointment` struct and `AppointmentManager` class for booking and displaying appointments.
+Check availability of doctors by their ID.
 
-- **billing.h / billing.cpp**  
-  Implements billing functionality with the `BillingManager` class, allowing bill generation and display based on appointments.
+Book patient appointments by selecting a doctor and time slot.
 
-- **main.cpp**  
-  The main program providing a menu-driven interface to interact with all system features.
+Display all booked appointments.
 
----
+Generate bills for completed appointments and avoid duplicate billing.
 
-## Features
+View all generated bills with details.
 
-- **Doctor Management**  
-  Add new doctors, update existing details, delete doctors, and search by name or ID.
+Installation and Running
 
-- **Appointment Booking**  
-  Book appointments for patients based on doctors' available slots and validate appointment details.
+Download or clone the project files to your computer.
 
-- **Billing System**  
-  Generate bills for appointments and maintain a list of generated bills, preventing duplicate billing.
+Compile all C++ source files together. For example, using g++ compiler:
+g++ main.cpp doctor_manager.cpp appointment1.cpp billing.cpp -o program.exe
 
-- **Data Structures**  
-  Uses singly linked list for doctors and vectors for appointments and bills for efficient management.
+Run the compiled executable by typing in the command prompt:
+.\program.exe
 
----
+Use the console menu to perform operations like managing doctors, booking appointments, and billing.
 
-## Usage Instructions
+Code Structure
 
-1. Compile all `.cpp` files together, for example:  
-   ```bash
-   g++ main.cpp doctor_manager.cpp appointment1.cpp billing.cpp doctor.cpp -o HospitalManagement
+doctor_manager.h and doctor_manager.cpp: Handle doctor information using a linked list.
+
+appointment1.h and appointment1.cpp: Manage appointments using vectors.
+
+billing.h and billing.cpp: Handle billing related to appointments, ensuring no repeated bills for the same appointment.
+
+main.cpp: Contains the main menu and connects all modules.
+
+Future Improvements
+
+Add file or database support to save data permanently.
+
+Improve appointment validation and conflict resolution.
+
+Add user roles and login authentication.
+
+Develop a graphical user interface (GUI) for easier use.
+
